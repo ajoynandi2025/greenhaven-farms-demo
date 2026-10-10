@@ -1,25 +1,43 @@
 # GreenHaven Farms — GitHub Pages demo
 
-A responsive, nature-inspired farmland landing page built with plain HTML, CSS and JavaScript. It is an original practice project inspired by the general layout and subject matter of the reference website, not a copy of its proprietary source code or brand assets.
+Responsive, nature-inspired website built with HTML, CSS, and JavaScript. Includes a journal landing section and three full-length demo articles. It is an original practice project inspired by the general subject and layout of the reference website; it does not include Hasiru Farms' proprietary source code or brand assets.
 
 ## Files
-- `index.html` — page content and sections
-- `style.css` — responsive layout and visual styling
-- `script.js` — mobile navigation, current year, and demo form behavior
+- `index.html` — main website
+- `style.css` — layout, styling, responsive rules, and article styles
+- `script.js` — mobile navigation and demo contact-form behavior
+- `story-sustainable-garden.html` — sustainability and gardening article
+- `story-time-in-nature.html` — wellbeing and nature article
+- `story-choosing-a-farm.html` — farmland due-diligence article
 
 ## Preview locally
-Open `index.html` in your browser. Internet access is needed for Google Fonts and the remote Unsplash photos.
+Open `index.html` in a browser. Internet access is required for Google Fonts and remote Unsplash photos.
 
-## Publish with GitHub Pages
-1. Sign in to GitHub and create a new **public** repository, for example `greenhaven-farms-demo`.
-2. Upload `index.html`, `style.css`, `script.js`, and `README.md` to the repository's root directory.
-3. Open the repository **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`, then click **Save**.
-6. Wait for the Pages deployment to finish. GitHub will display your published website URL in the Pages section.
+## Recommended branch-based deployment workflow
+GitHub Pages publishes the production website from `main`, while you make and review changes on a separate feature branch.
 
-## Before using it for a real business
-- Change the demo brand name and text to your own business details.
-- Use photos you own or have permission to use; replace the Unsplash image URLs if needed.
-- The contact form is front-end only. Connect it to a form service or backend before expecting to receive inquiries.
-- Do not use Hasiru Farms' logo, exact copy, photos, or other protected assets unless you have permission.
+1. Create a GitHub repository (for example, `greenhaven-farms-demo`) and clone it: `git clone https://github.com/YOUR-USERNAME/greenhaven-farms-demo.git`
+2. Copy all project files into the repository root.
+3. Create a feature branch: `git switch -c feature/story-articles`
+4. Stage and commit: `git add .` then `git commit -m "Expand journal with full articles"`
+5. Push the branch: `git push -u origin feature/story-articles`
+6. On GitHub, open a Pull Request from `feature/story-articles` into `main`, review the file changes, and merge it.
+7. In the repository, go to **Settings → Pages**. Set **Build and deployment** to **Deploy from a branch**, choose `main` and `/(root)`, then save.
+8. After the merge, open the **Actions** tab or **Settings → Pages** to check deployment status. Your website URL will be `https://YOUR-USERNAME.github.io/greenhaven-farms-demo/`.
+
+## Quick commands for future updates
+```bash
+git switch main
+git pull origin main
+git switch -c feature/your-change
+# edit files
+git add .
+git commit -m "Describe your change"
+git push -u origin feature/your-change
+```
+Then open a Pull Request into `main`. Merge after review; Pages will redeploy from `main`.
+
+## Notes
+- The contact form is front-end demo behavior only; connect a form service or backend to receive submissions.
+- Replace demo brand details and use only images/assets you own or have permission to use for a real business.
+- Do not promise investment returns or treat the sample farm checklist as legal/financial advice.
